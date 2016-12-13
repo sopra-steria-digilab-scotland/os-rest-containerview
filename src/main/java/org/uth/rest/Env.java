@@ -33,7 +33,7 @@ public class Env
     long end = System.currentTimeMillis();
     
     working.append( "{ \"envs\" : {\n" );
-    working.append( "  \"duration\" : \"" + ( end - start ) + "\"\n");
+    working.append( "  \"duration\" : \"" + ( end - start ) + "\",\n");
     working.append( "  \"values\" : {\n");
     
     for( int loop = 0; loop < sorted.length; loop++ )
