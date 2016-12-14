@@ -23,9 +23,15 @@ public class Quotas
     
     working.append( "{\"stats\" : {\n");
     working.append( "  \"processors\" : " + processors + ",\n" );
-    working.append( "  \"free_memory\" : " + freeMem + ",\n" );
-    working.append( "  \"max_memory\" : " + maxMem + ",\n" );
-    working.append( "  \"total_memory\" : " + totalMem + "\n"  );
+    working.append( "  \"free_memoryKB\" : " + ( freeMem / 1024 ) + ",\n" );
+    working.append( "  \"free_memoryMB\" : " + ( freeMem / 1048576 ) + ",\n" );
+    working.append( "  \"free_memoryGB\" : " + ( freeMem / 1073741824) + ",\n" );
+    working.append( "  \"max_memoryKB\" : " + ( maxMem / 1024 ) + ",\n" );
+    working.append( "  \"max_memoryMB\" : " + ( maxMem / 1048576 ) + ",\n" );
+    working.append( "  \"max_memoryGB\" : " + ( maxMem / 1073741824 ) + ",\n" );
+    working.append( "  \"total_memoryKB\" : " + ( totalMem / 1024 ) + "\n"  );
+    working.append( "  \"total_memoryMB\" : " + ( totalMem / 1048576 ) + "\n"  );
+    working.append( "  \"total_memoryGB\" : " + ( totalMem / 1073741824 ) + "\n"  );
     working.append( "}}\n");
     
     return working.toString();
