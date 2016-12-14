@@ -30,7 +30,7 @@ $( document ).ready( function() {
             type:'GET',
             success:function ( data ) {
                 //console.log("success: " + data.result);
-                $( '#result' ).text( data.result );
+                $( '#resultenv' ).text( data.resultenv );
             }
         })
         .error( function() {
@@ -45,7 +45,7 @@ $( document ).ready( function() {
             type:'GET',
             success:function ( data ) {
                 //console.log("success: " + data.result);
-                $( '#result' ).text( data.result );
+                $( '#resultip' ).text( data.resultip );
             }
         })
         .error( function() {
@@ -60,7 +60,7 @@ $( document ).ready( function() {
             type:'GET',
             success:function ( data ) {
                 //console.log("success: " + data.result);
-                $( '#result' ).text( data.result );
+                $( '#resultmbeans1' ).text( data.resultmbeans1 );
             }
         })
         .error( function() {
@@ -75,7 +75,7 @@ $( document ).ready( function() {
             type:'GET',
             success:function ( data ) {
                 //console.log("success: " + data.result);
-                $( '#result' ).text( data.result );
+                $( '#resultquotas' ).text( data.resultquotas );
             }
         })
         .error( function() {
@@ -89,10 +89,10 @@ $( document ).ready( function() {
 OS REST container view<br>
 <form name="theForm">
     <fieldset>
-        <input type="submit" id="env" value="Get Environment"/><span id="result"></span>
-        <input type="submit" id="ip" value="Get IP"/><span id="result"></span>
-        <input type="submit" id="mbeans1" value="Get Mbeans"/><span id="result"></span>
-        <input type="submit" id="quotas" value="Get Quotas"/><span id="result"></span>
+        <input type="submit" id="env" value="Get Environment"/><span id="resultenv"></span>
+        <input type="submit" id="ip" value="Get IP"/><span id="resultip"></span>
+        <input type="submit" id="mbeans1" value="Get Mbeans"/><span id="resultmbeans1"></span>
+        <input type="submit" id="quotas" value="Get Quotas"/><span id="resultquotas"></span>
     </fieldset>
 </form>
 
