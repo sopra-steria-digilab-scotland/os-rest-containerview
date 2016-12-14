@@ -16,7 +16,6 @@ public class MBeansTest1
   {
     RuntimeMXBean mxbean = ManagementFactory.getRuntimeMXBean();
     String vendor = mxbean.getVmVendor(); 
-
     return "{ \"vendor\" : \"" + vendor + "\" }";
   }
 }
