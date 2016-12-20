@@ -24,7 +24,7 @@ public class Runtime
     String bootClassPath = mxbean.getBootClassPath();
     String classPath = mxbean.getClassPath();
     String libraryPath = mxbean.getLibraryPath();
-    
+
     String managementSpecVersion = mxbean.getManagementSpecVersion();
     String specName = mxbean.getSpecName();
     String specVendor = mxbean.getSpecVendor();
