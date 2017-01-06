@@ -7,7 +7,9 @@
 
   <title>REST ContainerView Examples</title>
 </head>
-<body bgcolor="#444444" color="white">
+<body class="controller">
+<img src="images/redhat_icon.png" width=30 alt="Red Hat UK"/>
+
 <b>Select a REST Service to view in lower portion of screen:</b><br/><br/>
 &nbsp;&nbsp;<a href="rest/env" target="content">Environment Variables</a><br/>
 &nbsp;&nbsp;<a href="rest/ip" target="content">IP Address</a><br/>

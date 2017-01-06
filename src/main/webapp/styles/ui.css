@@ -13,6 +13,7 @@ img {cursor:hand}
 
 body { background-color:white;color:black;font-family:arial;font-size:9pt }
 body.loadingBody { background-color:#888888;font-family:arial;font-size:16pt;color:white }
+body.controller { background-color:#c9c9c9;font-family:arial;font-size:9pt;color:black }
 
 .messageDefault { font-size:16pt;color:white; text-decoration: none}
 .messageHighlight { font-size:17pt;color:yellow;text-decoration: bold}
