@@ -17,7 +17,7 @@ public class Memory
   public String getDetails()
   {
     MemoryMXBean mxbean = ManagementFactory.getMemoryMXBean();
-    
+  
     MemoryUsage heapMemory = mxbean.getHeapMemoryUsage();
     
     long committed = heapMemory.getCommitted();
@@ -27,7 +27,8 @@ public class Memory
     
     StringBuilder working = new StringBuilder();
     
-    working.append( "{ \"heap\" : {\n" );
+    working.append( "{ \"heap\" : \n" );
+    working.append( "  {\n" );
     working.append( "    \"initKB\" : " + ByteConvert.asKB(init) + "\",\n" );
     working.append( "    \"initMB\" : " + ByteConvert.asMB(init) + "\",\n" );
     working.append( "    \"initGB\" : " + ByteConvert.asGB(init) + "\",\n" );
@@ -38,7 +39,8 @@ public class Memory
     working.append( "    \"usedMB\" : " + ByteConvert.asMB(init) + "\",\n" );
     working.append( "    \"usedGB\" : " + ByteConvert.asGB(init) + "\",\n" );
     working.append( "    \"committed\" : " + committed + "\"\n" );
-    working.append( "}}\n" );
+    working.append( "  }\n" );
+    working.append( "}\n" );
     
     return working.toString();
   }

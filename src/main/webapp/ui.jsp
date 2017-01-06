@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Quick Frames</title>
   </head>
-  <frameset rows="150,*" border=0 framespacing=0 frameborder=0>
+  <frameset rows="160,*" border=0 framespacing=0 frameborder=0>
     <frame src="ui_controller.jsp" name="controller"/>
     <frame src="blank.html" name="content"/>    
   </frameset>

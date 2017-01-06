@@ -17,45 +17,36 @@ public class Runtime
   {
     RuntimeMXBean mxbean = ManagementFactory.getRuntimeMXBean();
     
-    String vendor = mxbean.getVmVendor(); 
-    String vmName = mxbean.getVmName();
-    String vmVersion = mxbean.getVmVersion();
-    
-    String bootClassPath = mxbean.getBootClassPath();
-    String classPath = mxbean.getClassPath();
-    String libraryPath = mxbean.getLibraryPath();
-
-    String managementSpecVersion = mxbean.getManagementSpecVersion();
-    String specName = mxbean.getSpecName();
-    String specVendor = mxbean.getSpecVendor();
-    String specVersion = mxbean.getSpecVersion();
-    long startTime = mxbean.getStartTime();
-    long upTime = mxbean.getUptime();
-           
     StringBuilder working = new StringBuilder();
     
-    working.append( "{ \"runtime\" : {\n" );
-    working.append( "  \"vendor\" : {\n" );
-    working.append( "    \"name\" : \"" + vendor + "\",\n" );
-    working.append( "    \"vm\" : \"" + vmName + "\",\n" );
-    working.append( "    \"version\" : \"" + vmVersion + "\"\n" );
-    working.append( "  },\n" );
-    working.append( "  \"paths\" : {\n" );
-    working.append( "    \"classPath\" : \"" + classPath + "\",\n" );
-    working.append( "    \"bootClassPath\" : \"" + bootClassPath + "\",\n" );
-    working.append( "    \"libraryPath\" : \"" + libraryPath + "\"\n" );
-    working.append( "  },\n" );
-    working.append( "  \"specifications\" : {\n" );
-    working.append( "    \"managementVersion\" : \"" + managementSpecVersion + "\",\n" );
-    working.append( "    \"name\" : \"" + specName + "\",\n" );
-    working.append( "    \"vendor\" : \"" + specVendor + "\",\n" );
-    working.append( "    \"version\" : \"" + specVersion + "\"\n" );
-    working.append( "  },\n" );
-    working.append( "  \"timings\" : {\n" );
-    working.append( "    \"startTime\" : \"" + DateFormatter.longDateFormat(startTime) + "\",\n" );
-    working.append( "    \"upTime\" : " + upTime + "\n" );
-    working.append( "  },\n" );    
-    working.append( "}}\n" );
+    working.append( "{ \"runtime\" : \n" );
+    working.append( "  {\n" );
+    working.append( "    \"vendor\" : \n" );
+    working.append( "    {\n" );
+    working.append( "      \"name\" : \"" + mxbean.getVmVendor() + "\",\n" );
+    working.append( "      \"vm\" : \"" + mxbean.getVmName() + "\",\n" );
+    working.append( "      \"version\" : \"" + mxbean.getVmVersion() + "\"\n" );
+    working.append( "    },\n" );
+    working.append( "    \"paths\" : \n" );
+    working.append( "    {\n" );
+    working.append( "      \"classPath\" : \"" + mxbean.getClassPath() + "\",\n" );
+    working.append( "      \"bootClassPath\" : \"" + mxbean.getBootClassPath() + "\",\n" );
+    working.append( "      \"libraryPath\" : \"" + mxbean.getLibraryPath() + "\"\n" );
+    working.append( "    },\n" );
+    working.append( "    \"specifications\" : \n" );
+    working.append( "    {\n" );
+    working.append( "      \"managementVersion\" : \"" + mxbean.getManagementSpecVersion() + "\",\n" );
+    working.append( "      \"name\" : \"" + mxbean.getSpecName() + "\",\n" );
+    working.append( "      \"vendor\" : \"" + mxbean.getSpecVendor() + "\",\n" );
+    working.append( "      \"version\" : \"" + mxbean.getSpecVersion() + "\"\n" );
+    working.append( "    },\n" );
+    working.append( "    \"timings\" : \n" );
+    working.append( "    {\n" );
+    working.append( "      \"startTime\" : \"" + DateFormatter.longDateFormat(mxbean.getStartTime()) + "\",\n" );
+    working.append( "      \"upTime\" : " + mxbean.getUptime() + "\n" );
+    working.append( "    },\n" );    
+    working.append( "  }\n" );
+    working.append( "}\n" );
     
     return working.toString();
   }

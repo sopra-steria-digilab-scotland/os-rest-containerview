@@ -20,5 +20,6 @@
 &nbsp;&nbsp;<a href="rest/quotas" target="content">Quotas</a><br/>
 &nbsp;&nbsp;[MBEAN] <a href="rest/mbeans/runtime" target="content">Runtime Data</a><br/>
 &nbsp;&nbsp;[MBEAN] <a href="rest/mbeans/memory" target="content">Memory Settings/Usage</a><br/>
+&nbsp;&nbsp;[MBEAN] <a href="rest/mbeans/thread" target="content">Threads</b><br/>
 </body>
 </html>
