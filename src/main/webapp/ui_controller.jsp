@@ -7,7 +7,7 @@
 
   <title>REST ContainerView Examples</title>
 </head>
-<body>
+<body bgcolor="#444444" color="white">
 <b>Select a REST Service to view in lower portion of screen:</b><br/><br/>
 &nbsp;&nbsp;<a href="rest/env" target="content">Environment Variables</a><br/>
 &nbsp;&nbsp;<a href="rest/ip" target="content">IP Address</a><br/>
