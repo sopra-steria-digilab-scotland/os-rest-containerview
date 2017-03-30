@@ -10,7 +10,7 @@
 <body class="controller">
 <table width="100%" border=0>
 <tr>
-<td width="40" align=center valign=middle><img src="images/redhat_icon.png" width="35px"/></td>
+<td width="40" align=center valign=middle><img src="images/soprasteria_full_128.png" width="35px"/></td>
 <td valign=middle><b>Select a REST Service to view in lower portion of screen</b></td>
 </tr>
 </table>
